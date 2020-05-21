@@ -1,0 +1,81 @@
+﻿@charset "UTF-8";
+
+@charset "UTF-8";
+
+.tab-item {
+  display: none;
+}
+.is-active-item {
+  display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.tab_btn {
+  font-size: 24px;
+  padding: 5px;
+  border-bottom: 1px solid #888888;
+  display: inline-block;
+  background-color: #a86363;
+  opacity: 0.5;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+}
+.is-active-btn {
+  opacity: 1;
+  border-bottom: 1px solid #a86363;
+}
+.tab-item {
+  width: 400px;
+  height: 300px;
+  padding: 5px;
+  font-size: 30px;
+  background-color: #a86363;
+
+}
+
+/* レイアウト */
+body {
+  width: 90%;
+  min-height: 100vh;
+  display: grid;
+  grid-template:
+      "... ...... ...... ...... ...... ...... ..."
+      "... header header header header header ..." 150px
+      "... ...... ...... ...... ...... ...... ..." 20px
+      "... left   ...... center ...... right  ..." 1fr
+      "... ...... ...... ...... ...... ...... ..." 20px
+      "... footer footer footer footer footer ..." 100px
+      "... ...... ..... ...... ..... ...... ..."
+      / 10px 1fr 10px 2fr 10px 1fr;
+
+
+      /* "header header header" 150px
+      "left   center right " 1fr
+      "footer footer footer" 100px; */
+
+}
+header {
+  grid-area: header;
+  background-color: #f1b6b6;
+}
+main {
+  padding: 50px;
+  grid-area: center;
+  background-color: #e9e7e7;
+}
+nav {
+  grid-area: left;
+  background-color: #e9dddd;
+}
+aside {
+  grid-area: right;
+  background-color: #ebd4d4;
+}
+footer {
+  grid-area: footer;
+  background-color: #dfdede;
+}
